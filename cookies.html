@@ -13,6 +13,29 @@
     h1 { margin-bottom: 1em; }
     h2 { margin-top: 2em; }
     p { line-height: 1.6; margin-bottom: 1em; }
+    /* Cookie consent dialog styling */
+    #cookieConsent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #111;
+      color: white;
+      padding: 1em;
+      text-align: center;
+      display: none;
+    }
+    #cookieConsent button {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    #cookieConsent button:hover {
+      background-color: #777;
+    }
   </style>
 </head>
 <body>
@@ -79,5 +102,31 @@
   <footer>
     <p>&copy; 2025 ModMyEngine. All rights reserved.</p>
   </footer>
+
+  <!-- Cookie consent dialog box -->
+  <div id="cookieConsent">
+    <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies. <a href="cookies.html">Learn more</a></p>
+    <button id="acceptCookies">Accept</button>
+    <button id="declineCookies">Decline</button>
+  </div>
+
+  <script>
+    // Check if user has already accepted or declined cookies
+    if (!localStorage.getItem('cookiesAccepted')) {
+      document.getElementById('cookieConsent').style.display = 'block';
+    }
+
+    // Handle Accept button click
+    document.getElementById('acceptCookies').addEventListener('click', function() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookieConsent').style.display = 'none';
+    });
+
+    // Handle Decline button click
+    document.getElementById('declineCookies').addEventListener('click', function() {
+      localStorage.setItem('cookiesAccepted', 'false');
+      document.getElementById('cookieConsent').style.display = 'none';
+    });
+  </script>
 </body>
 </html>
