@@ -62,13 +62,13 @@
         display: inline-block;
     }
 
-    .products {
+    .products, .about, .why-us, .reviews, .contact {
         padding: 2em;
         background: #fff;
         text-align: center;
     }
 
-    .products h2 {
+    .products h2, .about h2, .why-us h2, .reviews h2, .contact h2 {
         margin-bottom: 1em;
     }
 
@@ -104,10 +104,18 @@
         margin-top: 0.5em;
     }
 
-    .about, .contact {
-        padding: 2em;
-        background: #eee;
-        text-align: center;
+    .section-content {
+        max-width: 800px;
+        margin: auto;
+        text-align: left;
+    }
+
+    .review {
+        background: #f0f0f0;
+        padding: 1em;
+        margin: 1em auto;
+        border-left: 4px solid #e63946;
+        max-width: 700px;
     }
 
     footer {
@@ -118,7 +126,6 @@
         font-size: 0.9em;
     }
 
-    /* Responsive Layout */
     @media screen and (max-width: 768px) {
         .product-grid {
             flex-direction: column;
@@ -150,6 +157,8 @@
         <li><a href="#">Home</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -205,13 +214,47 @@
 
   <section id="about" class="about">
     <h2>About ModMyEngine</h2>
-    <p>We’re dedicated to helping car enthusiasts get the most out of their vehicles with premium aftermarket parts and expert support.</p>
+    <div class="section-content">
+      <p>ModMyEngine was founded by a group of car enthusiasts who believe that vehicles should be a reflection of their owners. We know the thrill of driving a machine that performs better, sounds louder, and handles tighter than anything straight from the factory floor. That’s why we dedicate ourselves to offering the best aftermarket parts that enhance your car’s performance and personality.</p>
+      <p>Since day one, our goal has been to empower drivers—whether you’re a weekend tuner or a professional racer. We source only the highest-quality parts and work with trusted manufacturers to ensure every component meets your performance goals.</p>
+      <p>Beyond products, we stand for a lifestyle. ModMyEngine is about pushing limits, seeking perfection, and embracing every rev and roar of the engine. Join us on a journey where innovation meets horsepower, and let’s build something legendary together.</p>
+    </div>
+  </section>
+
+  <section id="why-us" class="why-us">
+    <h2>Why Choose ModMyEngine?</h2>
+    <div class="section-content">
+      <ul>
+        <li><strong>Top-Quality Parts:</strong> Every item in our catalog has been hand-selected and tested to meet rigorous performance standards.</li>
+        <li><strong>Expert Advice:</strong> Our team of seasoned automotive specialists is always ready to help you pick the right part for your ride.</li>
+        <li><strong>Fast Shipping:</strong> We ship quickly and reliably so you can get your parts and get back on the road fast.</li>
+        <li><strong>Passion for Performance:</strong> We’re not just retailers—we live and breathe performance tuning every day.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="review">
+      <p>“The turbo kit I got from ModMyEngine totally transformed my car. Customer support was fantastic, and shipping was fast. Will definitely be back!” – <strong>James M.</strong></p>
+    </div>
+    <div class="review">
+      <p>“I've never had an easier time finding parts that actually fit my setup. ModMyEngine knows their stuff. Great prices too!” – <strong>Alexa T.</strong></p>
+    </div>
+    <div class="review">
+      <p>“Hands down the best experience I’ve had with an online auto parts store. Everything worked as promised. Love the performance exhaust.” – <strong>Brian K.</strong></p>
+    </div>
   </section>
 
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>Email: support@modmyengine.com</p>
-    <p>Phone: (123) 456-7890</p>
+    <div class="section-content">
+      <p>Have questions, need help choosing a product, or want to request a part? Our support team is ready to help.</p>
+      <p><strong>Email:</strong> support@modmyengine.com</p>
+      <p><strong>Phone:</strong> (123) 456-7890</p>
+      <p><strong>Business Hours:</strong> Mon–Fri, 9 AM – 6 PM (PST)</p>
+      <p>Follow us on social media for the latest builds, tips, and product releases!</p>
+    </div>
   </section>
 
   <footer>
